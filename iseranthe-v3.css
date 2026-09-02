@@ -1,0 +1,284 @@
+@import url("https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@153b043c583298a6e18feb35caede79d8ff5dc90/iseranthe-v2.css");
+/* Iseranthe V3 — pages de jeu, messages, profils et formulaires */
+.forabg, .forumbg, .forumline, .panel, .post, .postprofile, .postbody,
+.topiclist, .table, .profile, .profile-content, .cp-main, .ucp-main,
+#cp-main, .block, .module, .privmsgs, .message-box {
+  border-radius: 0 !important;
+}
+.sub-header {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) auto !important;
+  gap: 28px !important;
+  align-items: end !important;
+  margin: 0 0 26px !important;
+  padding: 31px 34px 27px !important;
+  color: var(--ise-paper) !important;
+  background: var(--ise-ink) !important;
+  border: 1px solid var(--ise-line) !important;
+  border-bottom: 5px solid var(--ise-gold) !important;
+  box-shadow: 10px 10px 0 rgba(38,25,13,.14) !important;
+}
+.sub-header::before {
+  content: "CHRONIQUES" !important;
+  position: absolute !important;
+  top: 16px !important;
+  right: 24px !important;
+  color: var(--ise-gold-pale) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 8px !important;
+  letter-spacing: .23em !important;
+  opacity: .75 !important;
+}
+.sub-header .page-title, .sub-header .page-title a {
+  margin: 0 !important;
+  color: var(--ise-paper) !important;
+  font-family: var(--ise-serif) !important;
+  font-size: clamp(27px,4vw,44px) !important;
+  font-weight: 400 !important;
+  letter-spacing: .01em !important;
+}
+.sub-header-path, .sub-header-path a, .sub-header .posters-list {
+  margin-top: 10px !important;
+  color: var(--ise-gold-pale) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 9px !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+.sub-header-buttons { display: flex !important; gap: 9px !important; flex-wrap: wrap !important; justify-content: flex-end !important; }
+.sub-header-buttons a, .topic-actions a, .pagination a {
+  border-radius: 0 !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+.topic-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  margin: 0 0 25px !important;
+  padding: 13px 17px !important;
+  background: var(--ise-paper-2) !important;
+  border: 1px solid var(--ise-line) !important;
+}
+.pagination { color: var(--ise-wine) !important; }
+.pagination a, .pagination strong {
+  display: inline-grid !important;
+  place-items: center !important;
+  min-width: 27px !important;
+  height: 27px !important;
+  margin: 0 2px !important;
+  color: var(--ise-ink) !important;
+  background: var(--ise-paper) !important;
+  border: 1px solid var(--ise-line) !important;
+}
+.pagination strong, .pagination a:hover { color: var(--ise-paper) !important; background: var(--ise-wine) !important; }
+.post {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 220px minmax(0,1fr) !important;
+  overflow: hidden !important;
+  margin: 0 0 25px !important;
+  color: var(--ise-ink) !important;
+  background: var(--ise-paper) !important;
+  border: 1px solid var(--ise-line) !important;
+  border-left: 5px solid var(--ise-gold) !important;
+  box-shadow: 7px 7px 0 rgba(182,132,56,.10) !important;
+}
+.postprofile {
+  grid-column: 1 !important;
+  grid-row: 1 / span 3 !important;
+  padding: 29px 21px !important;
+  color: var(--ise-paper) !important;
+  background: linear-gradient(155deg, var(--ise-ink), var(--ise-ink-2)) !important;
+  border-right: 1px solid rgba(223,189,126,.22) !important;
+}
+.postprofile dt { text-align: left !important; }
+.postprofile-avatar, .postprofile-avatar img {
+  width: 100px !important;
+  height: 100px !important;
+  margin: 0 0 16px !important;
+  border-radius: 0 !important;
+  border: 1px solid var(--ise-gold-pale) !important;
+  object-fit: cover !important;
+}
+.postprofile-name, .postprofile-name a {
+  color: var(--ise-paper) !important;
+  font-family: var(--ise-serif) !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  line-height: 1.05 !important;
+}
+.postprofile-rank {
+  margin: 9px 0 17px !important;
+  color: var(--ise-gold-pale) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 8px !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+.postprofile dd {
+  padding: 7px 0 !important;
+  color: rgba(250,245,235,.78) !important;
+  border-top: 1px solid rgba(223,189,126,.15) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 10px !important;
+  line-height: 1.45 !important;
+}
+.post-head {
+  grid-column: 2 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  min-height: 56px !important;
+  padding: 0 28px !important;
+  color: var(--ise-ink-2) !important;
+  background: var(--ise-paper-2) !important;
+  border-bottom: 1px solid var(--ise-line) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 9px !important;
+  letter-spacing: .08em !important;
+}
+.post-head a { color: var(--ise-wine) !important; }
+.profile-icons a, .post-head .profile-icons a {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 27px !important;
+  height: 27px !important;
+  margin-left: 5px !important;
+  border: 1px solid var(--ise-line) !important;
+  color: var(--ise-wine) !important;
+  background: var(--ise-paper) !important;
+}
+.profile-icons a:hover { color: var(--ise-paper) !important; background: var(--ise-wine) !important; }
+.postbody {
+  grid-column: 2 !important;
+  min-width: 0 !important;
+  padding: 34px 35px 27px !important;
+  color: var(--ise-ink) !important;
+  background: var(--ise-paper) !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+}
+.postbody .content { min-height: 105px !important; }
+.postbody blockquote {
+  margin: 24px 0 !important;
+  padding: 18px 21px !important;
+  color: var(--ise-ink-2) !important;
+  background: var(--ise-paper-2) !important;
+  border: 0 !important;
+  border-left: 3px solid var(--ise-gold) !important;
+  font-family: var(--ise-serif) !important;
+}
+.signature_div, .signature {
+  grid-column: 2 !important;
+  margin: 0 35px 25px !important;
+  padding-top: 17px !important;
+  color: var(--ise-ink-2) !important;
+  border-top: 1px solid var(--ise-line) !important;
+  font-size: 12px !important;
+  line-height: 1.65 !important;
+}
+.forumline, .forabg, .forumbg {
+  overflow: hidden !important;
+  margin: 0 0 26px !important;
+  background: var(--ise-paper) !important;
+  border: 1px solid var(--ise-line) !important;
+  box-shadow: 7px 7px 0 rgba(182,132,56,.09) !important;
+}
+.forumline .header, .forabg .header, .forumbg .header {
+  padding: 18px 24px !important;
+  color: var(--ise-paper) !important;
+  background: var(--ise-ink) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+.topiclist li.row {
+  margin: 0 !important;
+  padding: 19px 24px !important;
+  color: var(--ise-ink) !important;
+  background: transparent !important;
+  border-bottom: 1px solid var(--ise-line) !important;
+}
+.topiclist li.row:hover { background: var(--ise-paper-2) !important; }
+.topiclist li.row:last-child { border-bottom: 0 !important; }
+.topiclist .topictitle, .topiclist .topictitle a {
+  color: var(--ise-ink) !important;
+  font-family: var(--ise-serif) !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+}
+.topiclist .topictitle a:hover { color: var(--ise-wine) !important; }
+.topiclist .row .forumdesc, .topiclist .row .lastpost, .topiclist .row .topics, .topiclist .row .posts {
+  color: var(--ise-ink-2) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 10px !important;
+  line-height: 1.55 !important;
+}
+.panel, .block, .module, .message-box, .cp-main, .ucp-main, #cp-main {
+  margin-bottom: 25px !important;
+  padding: 28px !important;
+  color: var(--ise-ink) !important;
+  background: var(--ise-paper) !important;
+  border: 1px solid var(--ise-line) !important;
+  box-shadow: 6px 6px 0 rgba(182,132,56,.08) !important;
+}
+.panel h1, .panel h2, .panel h3, .block h1, .block h2, .block h3, .cp-main h1, .ucp-main h1 {
+  color: var(--ise-wine) !important;
+  font-family: var(--ise-serif) !important;
+  font-weight: 400 !important;
+}
+.profile, .profile-content {
+  overflow: hidden !important;
+  color: var(--ise-ink) !important;
+  background: var(--ise-paper) !important;
+  border: 1px solid var(--ise-line) !important;
+  box-shadow: 9px 9px 0 rgba(182,132,56,.1) !important;
+}
+.profile-head, .profile-header {
+  padding: 33px !important;
+  color: var(--ise-paper) !important;
+  background: linear-gradient(120deg, var(--ise-ink), var(--ise-wine)) !important;
+}
+.profile-head h1, .profile-header h1, .profile-head a, .profile-header a { color: var(--ise-paper) !important; }
+.profile-field, .profile-field-content, .field_uneditable, .inputbox, textarea, select {
+  border-radius: 0 !important;
+  border-color: var(--ise-line) !important;
+}
+.inputbox, textarea, select, input[type="text"], input[type="password"], input[type="email"] {
+  color: var(--ise-ink) !important;
+  background: var(--ise-paper) !important;
+  border: 1px solid var(--ise-line) !important;
+  font-family: var(--ise-serif) !important;
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid rgba(182,132,56,.32) !important;
+  outline-offset: 1px !important;
+  border-color: var(--ise-gold) !important;
+}
+#page-footer, .footerbar, .copyright {
+  color: var(--ise-paper) !important;
+  background: var(--ise-ink) !important;
+  border-color: var(--ise-line) !important;
+}
+#page-footer a, .footerbar a, .copyright a { color: var(--ise-gold-pale) !important; }
+@media (max-width: 760px) {
+  .sub-header { grid-template-columns: 1fr !important; gap: 16px !important; padding: 27px 23px 22px !important; }
+  .sub-header-buttons { justify-content: flex-start !important; }
+  .post { grid-template-columns: 1fr !important; border-left-width: 4px !important; }
+  .postprofile { grid-column: 1 !important; grid-row: auto !important; padding: 22px !important; border-right: 0 !important; border-bottom: 1px solid rgba(223,189,126,.22) !important; }
+  .postprofile-avatar, .postprofile-avatar img { width: 65px !important; height: 65px !important; float: left !important; margin: 0 14px 10px 0 !important; }
+  .post-head, .postbody, .signature_div, .signature { grid-column: 1 !important; }
+  .post-head { min-height: 48px !important; padding: 0 20px !important; }
+  .postbody { padding: 25px 22px !important; }
+  .signature_div, .signature { margin: 0 22px 21px !important; }
+  .topiclist li.row { padding: 16px 17px !important; }
+  .panel, .block, .module, .message-box, .cp-main, .ucp-main, #cp-main { padding: 21px !important; }
+}
