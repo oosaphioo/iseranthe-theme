@@ -512,11 +512,6 @@ img { max-width: 100%; }
 
 .topiclist.forums .ise5-forum-cover {
   display: none !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0;
-  display: block !important;
-  width: 100% !important;
   height: 100% !important;
   margin: 0 !important;
   overflow: hidden;
