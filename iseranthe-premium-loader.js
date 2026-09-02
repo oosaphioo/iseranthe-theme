@@ -17,6 +17,10 @@
       href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@64b233f8760addf02de8f76b7000686421f4385b/iseranthe-premium-atmosphere.css"
     },
     {
+      id: "square-forums",
+      href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@d01ff4f0ebf6a5868cbe0f5c0e9196d20a70dd68/iseranthe-premium-square-forums.css"
+    },
+    {
       id: "reading-atmosphere",
       href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@b2e3da8b6ee1f85274d4c121b7f37dc3638ed3d5/iseranthe-premium-reading-atmosphere.css"
     },
