@@ -1,0 +1,72 @@
+/*
+  Iseranthe — composition lumineuse de la carte de forum
+  Corrige le vide à droite sans ré-agrandir la carte.
+*/
+html[data-theme="light"] .ise3-index .ise5-forum-card {
+  background:
+    linear-gradient(90deg, rgba(255, 251, 243, .98) 0%, rgba(255, 251, 243, .95) 52%, rgba(255, 251, 243, .64) 65%, rgba(255, 251, 243, .10) 100%),
+    var(--ise5-forum-image) center / cover no-repeat !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-lastpost {
+  position: relative !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  gap: 13px !important;
+  padding: 29px 25px !important;
+  color: #fff8ea !important;
+  background:
+    linear-gradient(155deg, rgba(35, 22, 13, .82), rgba(67, 42, 23, .67)) !important;
+  border-left-color: rgba(239, 201, 129, .45) !important;
+  text-align: center !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-lastpost::before {
+  content: "✦" !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  color: #f0ca84 !important;
+  border: 1px solid rgba(240, 202, 132, .55) !important;
+  border-radius: 50% !important;
+  font-size: 10px !important;
+}
+html[data-theme="light"] .ise3-index .ise5-lastpost-avatar {
+  flex: 0 0 66px !important;
+  width: 66px !important;
+  height: 66px !important;
+  border-color: #f0ca84 !important;
+}
+html[data-theme="light"] .ise3-index .ise5-lastpost-info {
+  width: 100% !important;
+  color: rgba(255, 248, 234, .78) !important;
+  font-size: 10px !important;
+  text-align: center !important;
+}
+html[data-theme="light"] .ise3-index .ise5-lastpost-info small {
+  color: #f0ca84 !important;
+}
+html[data-theme="light"] .ise3-index .ise5-lastpost-info > a {
+  overflow: visible !important;
+  color: #fff8ea !important;
+  font-size: 20px !important;
+  line-height: 1.12 !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+}
+html[data-theme="light"] .ise3-index .ise5-lastpost-info span,
+html[data-theme="light"] .ise3-index .ise5-lastpost-info a.gensmall {
+  color: rgba(255, 248, 234, .82) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-stats {
+  padding-bottom: 27px !important;
+}
+@media (max-width: 760px) {
+  html[data-theme="light"] .ise3-index .ise5-card-lastpost {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  html[data-theme="light"] .ise3-index .ise5-card-lastpost::before { display: none !important; }
+  html[data-theme="light"] .ise3-index .ise5-lastpost-info { text-align: left !important; }
+}
