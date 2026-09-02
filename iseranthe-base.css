@@ -529,6 +529,11 @@ img { max-width: 100%; }
   filter: saturate(.76) contrast(1.06);
 }
 
+/* ModernBB applies this indent with !important; reset it for the contained hero card. */
+#main-content ul.forums dl.icon dd.dterm > div {
+  margin-left: 0 !important;
+}
+
 .topiclist.forums .dterm > div {
   position: relative;
   z-index: 2;
