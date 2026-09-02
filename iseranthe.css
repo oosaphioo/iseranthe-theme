@@ -291,3 +291,49 @@ button:hover,.button1:hover,.button2:hover,input[type="submit"]:hover,input[type
   #main-content .panel dl { display:block; }
   #main-content .panel dt { margin-bottom:.4rem; }
 }
+
+/* Recherche, FAQ, membres et administration légère */
+#fa_search,
+#main-content .search-results,
+#main-content .faq,
+#main-content .faq-list,
+#main-content #memberlist {
+  border:1px solid var(--ise-line); border-radius:5px; background:color-mix(in srgb,var(--ise-panel) 92%,transparent); box-shadow:var(--ise-shadow);
+}
+#main-content .search-results,
+#main-content .faq,
+#main-content .faq-list { padding:clamp(1rem,3vw,2rem); }
+#main-content .search-results .topic,
+#main-content .faq li,
+#main-content .faq-list li {
+  border-bottom:1px solid color-mix(in srgb,var(--ise-line) 68%,transparent); list-style:none; padding:1rem 0;
+}
+#main-content .search-results .topic:last-child,
+#main-content .faq li:last-child,
+#main-content .faq-list li:last-child { border-bottom:0; }
+#main-content .faq li a,
+#main-content .faq-list li a {
+  color:var(--ise-gold); font:600 1.15rem var(--ise-serif); text-decoration:none;
+}
+#main-content .faq li a:hover,
+#main-content .faq-list li a:hover { color:var(--ise-gold-bright); }
+#main-content .search-result-title,
+#main-content .topic-name {
+  color:var(--ise-gold); font:600 1.3rem/1.2 var(--ise-serif);
+}
+#main-content .search-result-meta,
+#main-content .topic-meta { color:var(--ise-muted); font-size:.7rem; letter-spacing:.06em; }
+#main-content .modcp,
+#main-content .report,
+#main-content .post-review {
+  border:1px solid var(--ise-line); background:color-mix(in srgb,var(--ise-panel) 90%,transparent); box-shadow:var(--ise-shadow); padding:clamp(1rem,3vw,2rem);
+}
+#main-content .modcp h1,
+#main-content .modcp h2,
+#main-content .report h1,
+#main-content .post-review h1 { color:var(--ise-gold); font-family:var(--ise-serif); }
+#main-content .pagination + .search-results { margin-top:1rem; }
+#main-content .panel .row1,
+#main-content .panel .row2 { background:transparent; }
+#main-content .panel .row1:hover,
+#main-content .panel .row2:hover { background:color-mix(in srgb,var(--ise-gold) 6%,transparent); }
