@@ -1,0 +1,117 @@
+/*
+  Iseranthe — cartes de forum carrées
+  Grille horizontale sur ordinateur, lecture verticale sur mobile.
+*/
+
+@media (min-width: 761px) {
+  .ise3-index .ise5-forum-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 22px !important;
+    max-width: 950px !important;
+    margin-inline: auto !important;
+  }
+
+  .ise3-index .ise5-forum-card {
+    flex: 0 1 calc(50% - 11px) !important;
+    width: calc(50% - 11px) !important;
+    max-width: calc(50% - 11px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+  }
+
+  .ise3-index .ise5-card-body {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    padding: 70px 28px 83px !important;
+  }
+
+  .ise3-index .ise5-card-title .forumtitle {
+    font-size: clamp(30px, 3.15vw, 41px) !important;
+  }
+
+  .ise3-index .ise5-card-description {
+    margin-top: 15px !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+  }
+
+  .ise3-index .ise5-card-links {
+    margin-top: 14px !important;
+  }
+
+  .ise3-index .ise5-card-links > span {
+    gap: 5px !important;
+    padding: 8px 9px 8px 10px !important;
+  }
+
+  .ise3-index .ise5-card-links a {
+    min-height: 22px !important;
+    padding: 3px 8px !important;
+    font-size: 9px !important;
+  }
+
+  .ise3-index .ise5-card-stats {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    gap: 14px !important;
+    padding: 0 28px 25px !important;
+  }
+
+  .ise3-index .ise5-card-body::after {
+    right: 28px !important;
+    bottom: 59px !important;
+    left: 28px !important;
+  }
+
+  .ise3-index .ise5-card-lastpost {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-height: 89px !important;
+    padding: 14px 21px !important;
+    background: rgba(13, 9, 6, .7) !important;
+    border-top: 1px solid rgba(255, 248, 235, .22) !important;
+    border-left: 0 !important;
+  }
+
+  .ise3-index .ise5-lastpost-avatar {
+    flex: 0 0 43px !important;
+    width: 43px !important;
+    height: 43px !important;
+  }
+
+  .ise3-index .ise5-lastpost-info > a {
+    font-size: 16px !important;
+  }
+
+  html[data-theme="light"] .ise3-index .ise5-card-lastpost {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    padding: 14px 21px !important;
+    text-align: left !important;
+  }
+
+  html[data-theme="light"] .ise3-index .ise5-card-lastpost::before {
+    display: none !important;
+  }
+
+  html[data-theme="light"] .ise3-index .ise5-lastpost-info {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .ise3-index .ise5-forum-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
