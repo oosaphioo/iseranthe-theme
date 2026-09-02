@@ -1,0 +1,126 @@
+/*
+  Iseranthe — réglage accueil clair
+  Carte de forum resserrée et sous-forums explicitement mis en avant.
+*/
+.ise3-index .ise5-forum-grid {
+  grid-template-columns: minmax(0, 920px) !important;
+  justify-content: center !important;
+}
+.ise3-index .ise5-forum-card {
+  min-height: 282px !important;
+}
+.ise3-index .ise5-card-body {
+  padding: 68px 34px 63px !important;
+}
+.ise3-index .ise5-card-title .forumtitle {
+  font-size: clamp(29px, 3.1vw, 42px) !important;
+}
+.ise3-index .ise5-card-links {
+  margin-top: 19px !important;
+}
+.ise3-index .ise5-card-links > span {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 7px !important;
+  font-size: 0 !important;
+}
+.ise3-index .ise5-card-links > span::before {
+  content: "Sous-forums" !important;
+  margin-right: 3px !important;
+  color: var(--ise-premium-accent-soft) !important;
+  font-family: var(--ise-premium-sans) !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+}
+.ise3-index .ise5-card-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 25px !important;
+  padding: 4px 10px !important;
+  color: var(--ise-premium-inverse) !important;
+  background: rgba(255, 248, 235, .1) !important;
+  border: 1px solid rgba(240, 202, 132, .42) !important;
+  border-radius: 999px !important;
+  font-family: var(--ise-premium-sans) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: .03em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+.ise3-index .ise5-card-links a:hover {
+  color: var(--ise-premium-night) !important;
+  background: var(--ise-premium-accent-soft) !important;
+  border-color: var(--ise-premium-accent-soft) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-forum-card {
+  color: #382719 !important;
+  background:
+    linear-gradient(90deg, rgba(255, 251, 243, .98) 0%, rgba(255, 251, 243, .94) 55%, rgba(255, 251, 243, .46) 100%),
+    var(--ise5-forum-image) center / cover no-repeat !important;
+  border-color: rgba(137, 92, 42, .32) !important;
+  box-shadow: 10px 11px 0 rgba(115, 75, 33, .12) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-forum-card::after {
+  border-color: rgba(104, 66, 28, .16) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-forum-card .ise-forum-status-marker {
+  color: #a87330 !important;
+  background: rgba(255, 252, 246, .92) !important;
+  border-color: rgba(168, 115, 48, .66) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-body {
+  color: #382719 !important;
+  background: linear-gradient(90deg, rgba(255, 251, 243, .38), transparent) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-title .forumtitle {
+  color: #382719 !important;
+  text-shadow: none !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-title .forumtitle:hover { color: #a87330 !important; }
+html[data-theme="light"] .ise3-index .ise5-card-title small { color: #a87330 !important; }
+html[data-theme="light"] .ise3-index .ise5-card-description {
+  color: #513a29 !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-links,
+html[data-theme="light"] .ise3-index .ise5-subforums {
+  color: #805327 !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-links > span::before { color: #a87330 !important; }
+html[data-theme="light"] .ise3-index .ise5-card-links a {
+  color: #5e3c1f !important;
+  background: rgba(255, 252, 246, .75) !important;
+  border-color: rgba(168, 115, 48, .5) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-links a:hover {
+  color: #fff8ea !important;
+  background: #a87330 !important;
+  border-color: #a87330 !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-stats {
+  color: #382719 !important;
+}
+html[data-theme="light"] .ise3-index .ise5-card-stats span { color: #725039 !important; }
+html[data-theme="light"] .ise3-index .ise5-card-stats strong { color: #382719 !important; }
+html[data-theme="light"] .ise3-index .ise5-card-stats i { color: #a87330 !important; }
+html[data-theme="light"] .ise3-index .ise5-card-lastpost {
+  color: #382719 !important;
+  background: rgba(255, 251, 243, .83) !important;
+  border-left-color: rgba(137, 92, 42, .25) !important;
+}
+html[data-theme="light"] .ise3-index .ise5-lastpost-avatar { border-color: #a87330 !important; }
+html[data-theme="light"] .ise3-index .ise5-lastpost-info { color: #725039 !important; }
+html[data-theme="light"] .ise3-index .ise5-lastpost-info small { color: #a87330 !important; }
+html[data-theme="light"] .ise3-index .ise5-lastpost-info > a { color: #382719 !important; }
+html[data-theme="light"] .ise3-index .ise5-lastpost-info span,
+html[data-theme="light"] .ise3-index .ise5-lastpost-info a.gensmall { color: #725039 !important; }
+@media (max-width: 760px) {
+  .ise3-index .ise5-forum-grid { grid-template-columns: 1fr !important; }
+  .ise3-index .ise5-card-body { padding: 68px 24px 25px !important; }
+  .ise3-index .ise5-card-stats { padding: 0 24px 18px !important; }
+  .ise3-index .ise5-card-lastpost { padding: 19px 24px !important; }
+  .ise3-index .ise5-card-links > span::before { flex-basis: 100% !important; }
+}
