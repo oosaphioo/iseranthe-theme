@@ -202,3 +202,51 @@ button:hover,.button1:hover,.button2:hover,input[type="submit"]:hover,input[type
   .post-head { grid-template-columns:auto 1fr; }
   .post-head .topic-date { grid-column:2; }
 }
+
+/* Profils et messagerie — cartes de personnage */
+#profile-advanced-layout {
+  display:grid; grid-template-columns:minmax(220px,.72fr) minmax(0,1.55fr); overflow:hidden; border-radius:5px;
+}
+#profile-advanced-left {
+  border-right:1px solid var(--ise-line); padding:1.15rem;
+}
+#profile-advanced-left .module {
+  border:1px solid var(--ise-line); border-radius:3px; margin-bottom:.85rem; overflow:hidden;
+}
+#profile-advanced-left .module-title {
+  border-bottom:1px solid var(--ise-line); background:color-mix(in srgb,var(--ise-gold) 8%,transparent);
+  margin:0; padding:.7rem .85rem;
+}
+#profile-advanced-right { padding:clamp(1.1rem,3vw,2.5rem); }
+#profile-advanced-right h1,
+#profile-advanced-right h2 {
+  color:var(--ise-gold); font:600 clamp(1.8rem,4vw,3rem)/1 var(--ise-serif); letter-spacing:.025em;
+}
+#profile-advanced-details .profile-field,
+#profile-advanced-right .field_uneditable {
+  border-bottom:1px solid color-mix(in srgb,var(--ise-line) 75%,transparent); padding:.85rem 0;
+}
+#profile-advanced-details .profile-field label,
+#profile-advanced-right label {
+  color:var(--ise-muted); display:block; font-size:.65rem; font-weight:700; letter-spacing:.1em; margin-bottom:.35rem; text-transform:uppercase;
+}
+#profile-advanced-right .avatar img {
+  border:1px solid var(--ise-line); box-shadow:var(--ise-shadow);
+}
+#cp-main { border-radius:0 5px 5px 0; min-height:500px; padding:clamp(1.1rem,3vw,2.5rem); }
+#cp-main h1,#cp-main h2 { color:var(--ise-gold); font-family:var(--ise-serif); font-weight:600; }
+#cp-menu { border-radius:5px 0 0 5px; padding:1rem; }
+.privmsg {
+  border-radius:4px; margin-bottom:1rem; overflow:hidden;
+}
+.privmsg .postprofile { background:color-mix(in srgb,var(--ise-gold) 5%,var(--ise-panel)); }
+.privmsg .postbody { padding:1.25rem; }
+#memberlist { border-radius:5px; overflow:hidden; }
+#memberlist .row1:hover,#memberlist .row2:hover { background:color-mix(in srgb,var(--ise-gold) 7%,transparent); }
+#memberlist .avatar-mini img { border:1px solid var(--ise-line); border-radius:2px; }
+
+@media (max-width:760px) {
+  #profile-advanced-layout { display:block; }
+  #profile-advanced-left { border-right:0; border-bottom:1px solid var(--ise-line); }
+  #cp-main,#cp-menu { border-radius:0; }
+}
