@@ -3,7 +3,7 @@
 
   if (/^\/admin(?:\/|$)/i.test(location.pathname)) return;
 
-  var cssUrl = "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@79d9126abd9a02009d361c789a80e1bb8cd51374/iseranthe-base.css";
+  var cssUrl = "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@67cdcabb7a3e9ae7a0b58cb626535b38a22c9e97/iseranthe-base.css";
   var root = document.documentElement;
   var stored = null;
 
