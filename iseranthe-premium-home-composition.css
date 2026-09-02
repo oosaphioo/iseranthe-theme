@@ -70,3 +70,23 @@ html[data-theme="light"] .ise3-index .ise5-card-stats {
   html[data-theme="light"] .ise3-index .ise5-card-lastpost::before { display: none !important; }
   html[data-theme="light"] .ise3-index .ise5-lastpost-info { text-align: left !important; }
 }
+
+@media (max-width: 760px) {
+  .ise3-index .ise5-forum-card {
+    min-height: 360px !important;
+  }
+
+  .ise3-index .ise5-card-main {
+    padding: 34px 25px 22px !important;
+  }
+
+  .ise3-index .ise5-card-subforums {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+  }
+
+  .ise3-index .ise5-card-subforums a {
+    font-size: 10px !important;
+  }
+}
