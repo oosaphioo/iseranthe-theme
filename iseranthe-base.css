@@ -493,7 +493,10 @@ img { max-width: 100%; }
   overflow: hidden;
   padding: 0 !important;
   color: var(--ise-hero-ink);
-  background: var(--ise-hero);
+  background:
+    linear-gradient(90deg, rgba(10, 7, 5, .93) 0%, rgba(10, 7, 5, .7) 58%, rgba(10, 7, 5, .34) 100%),
+    url("https://www.aht.li/3983819/568ebfca3f175a3b4046b71790cde5a0.png") center / cover no-repeat,
+    var(--ise-hero);
 }
 
 .topiclist.forums .dterm::before {
@@ -508,6 +511,7 @@ img { max-width: 100%; }
 }
 
 .topiclist.forums .ise5-forum-cover {
+  display: none !important;
   position: absolute !important;
   inset: 0 !important;
   z-index: 0;
