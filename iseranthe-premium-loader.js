@@ -19,6 +19,10 @@
     {
       id: "reading-atmosphere",
       href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@b2e3da8b6ee1f85274d4c121b7f37dc3638ed3d5/iseranthe-premium-reading-atmosphere.css"
+    },
+    {
+      id: "utilities-atmosphere",
+      href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@b6489cf48efdd1190d003bb72ea51fafdb44812f/iseranthe-premium-utilities-atmosphere.css"
     }
   ];
 
