@@ -1,0 +1,338 @@
+/*
+  Iseranthe — lecture premium
+  Habillage des pages de sujets et listes, sans réécrire les structures Forumactif.
+*/
+#main-content {
+  --ise-reading-surface: #fffaf1;
+  --ise-reading-surface-alt: #f1e4d2;
+  --ise-reading-ink: #38271a;
+  --ise-reading-muted: #806853;
+  --ise-reading-night: #251a12;
+  --ise-reading-gold: #ab7531;
+  --ise-reading-gold-pale: #dfbd7c;
+  --ise-reading-line: rgba(133, 89, 39, .26);
+  --ise-reading-inverse: #fff8ea;
+}
+html[data-theme="dark"] #main-content {
+  --ise-reading-surface: #1d1712;
+  --ise-reading-surface-alt: #2a2119;
+  --ise-reading-ink: #f0e2cb;
+  --ise-reading-muted: #c8b49a;
+  --ise-reading-night: #110d0a;
+  --ise-reading-gold: #dfad59;
+  --ise-reading-gold-pale: #f0ca84;
+  --ise-reading-line: rgba(224, 174, 91, .26);
+  --ise-reading-inverse: #fff8ea;
+}
+#main-content .sub-header {
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  overflow: hidden !important;
+  margin: 0 0 20px !important;
+  padding: 31px 34px 27px !important;
+  color: var(--ise-reading-inverse) !important;
+  background:
+    linear-gradient(110deg, rgba(184, 125, 47, .2), transparent 48%),
+    var(--ise-reading-night) !important;
+  border: 1px solid var(--ise-reading-line) !important;
+  border-bottom: 4px solid var(--ise-reading-gold) !important;
+  box-shadow: 10px 11px 0 rgba(68, 42, 18, .12) !important;
+}
+#main-content .sub-header::after {
+  content: "CHRONIQUES" !important;
+  position: absolute !important;
+  top: 15px !important;
+  right: 24px !important;
+  color: var(--ise-reading-gold-pale) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  letter-spacing: .25em !important;
+  opacity: .78 !important;
+}
+#main-content .sub-header-info { min-width: 0 !important; }
+#main-content .sub-header .page-title,
+#main-content .sub-header .page-title a {
+  margin: 0 !important;
+  color: var(--ise-reading-inverse) !important;
+  font-family: "Cormorant Garamond", "Palatino Linotype", Georgia, serif !important;
+  font-size: clamp(29px, 4vw, 46px) !important;
+  font-weight: 500 !important;
+  letter-spacing: .005em !important;
+  line-height: .98 !important;
+  text-decoration: none !important;
+}
+#main-content .sub-header-path,
+#main-content .sub-header-path a {
+  margin-top: 12px !important;
+  color: var(--ise-reading-gold-pale) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .1em !important;
+  line-height: 1.55 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+#main-content .sub-header-path a:hover { color: var(--ise-reading-inverse) !important; }
+#main-content .sub-header-buttons {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+}
+#main-content .sub-header-buttons .button1,
+#main-content .topic-actions .button1,
+#main-content .topic-actions .button2 {
+  color: var(--ise-reading-inverse) !important;
+  background: transparent !important;
+  border: 1px solid rgba(240, 202, 132, .62) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+#main-content .sub-header-buttons .button1:hover,
+#main-content .topic-actions .button1:hover,
+#main-content .topic-actions .button2:hover {
+  color: var(--ise-reading-night) !important;
+  background: var(--ise-reading-gold-pale) !important;
+}
+#main-content .topic-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin: 0 0 20px !important;
+  padding: 11px 16px !important;
+  color: var(--ise-reading-muted) !important;
+  background: var(--ise-reading-surface-alt) !important;
+  border: 1px solid var(--ise-reading-line) !important;
+}
+#main-content .topic-actions a,
+#main-content .pagination a { color: var(--ise-reading-gold) !important; }
+#main-content .pagination strong,
+#main-content .pagination a:hover {
+  color: var(--ise-reading-inverse) !important;
+  background: var(--ise-reading-gold) !important;
+}
+#main-content .post {
+  position: relative !important;
+  overflow: hidden !important;
+  margin: 0 0 25px !important;
+  color: var(--ise-reading-ink) !important;
+  background: var(--ise-reading-surface) !important;
+  border: 1px solid var(--ise-reading-line) !important;
+  border-top: 4px solid var(--ise-reading-gold) !important;
+  border-radius: 0 !important;
+  box-shadow: 10px 11px 0 rgba(68, 42, 18, .1) !important;
+}
+html[data-theme="dark"] #main-content .post {
+  box-shadow: 10px 11px 0 rgba(0, 0, 0, .25) !important;
+}
+#main-content .postprofile {
+  position: relative !important;
+  min-height: 100% !important;
+  padding: 28px 20px !important;
+  color: var(--ise-reading-inverse) !important;
+  background:
+    linear-gradient(150deg, rgba(180, 119, 42, .2), transparent 55%),
+    var(--ise-reading-night) !important;
+  border-left: 1px solid rgba(240, 202, 132, .22) !important;
+}
+#main-content .postprofile dt { text-align: left !important; }
+#main-content .postprofile-avatar,
+#main-content .postprofile-avatar img {
+  width: 100px !important;
+  height: 100px !important;
+  margin: 0 0 17px !important;
+  border: 1px solid var(--ise-reading-gold-pale) !important;
+  border-radius: 0 !important;
+  object-fit: cover !important;
+}
+#main-content .postprofile-name,
+#main-content .postprofile-name a,
+#main-content .postprofile-name span,
+#main-content .postprofile-name strong {
+  color: var(--ise-reading-inverse) !important;
+  font-family: "Cormorant Garamond", "Palatino Linotype", Georgia, serif !important;
+  font-size: 27px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+#main-content .postprofile-rank {
+  margin: 9px 0 17px !important;
+  color: var(--ise-reading-gold-pale) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .15em !important;
+  text-transform: uppercase !important;
+}
+#main-content .postprofile-info {
+  padding: 12px 0 0 !important;
+  color: rgba(255, 248, 234, .77) !important;
+  border-top: 1px solid rgba(240, 202, 132, .2) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 10px !important;
+  line-height: 1.7 !important;
+}
+#main-content .postprofile-info .label,
+#main-content .postprofile-info .label span,
+#main-content .postprofile-info a {
+  color: var(--ise-reading-gold-pale) !important;
+}
+#main-content .postprofile-contact {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-top: 17px !important;
+}
+#main-content .postprofile-contact a {
+  display: grid !important;
+  place-items: center !important;
+  width: 26px !important;
+  height: 26px !important;
+  border: 1px solid rgba(240, 202, 132, .38) !important;
+}
+#main-content .postprofile-contact img {
+  max-width: 14px !important;
+  max-height: 14px !important;
+  filter: sepia(.5) brightness(1.55) !important;
+}
+#main-content .post-head {
+  min-height: 59px !important;
+  padding: 0 28px !important;
+  color: var(--ise-reading-muted) !important;
+  background: var(--ise-reading-surface-alt) !important;
+  border-bottom: 1px solid var(--ise-reading-line) !important;
+}
+#main-content .post-head .topic-title,
+#main-content .post-head .topic-title a {
+  color: var(--ise-reading-ink) !important;
+  font-family: "Cormorant Garamond", "Palatino Linotype", Georgia, serif !important;
+  font-size: 23px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+#main-content .post-head .topic-date {
+  color: var(--ise-reading-muted) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  letter-spacing: .08em !important;
+}
+#main-content .post-head .profile-icons a,
+#main-content .post-head .profile-icons span {
+  color: var(--ise-reading-gold) !important;
+  background: var(--ise-reading-surface) !important;
+  border: 1px solid var(--ise-reading-line) !important;
+}
+#main-content .postbody {
+  padding: 33px 34px 35px !important;
+  color: var(--ise-reading-ink) !important;
+  background: var(--ise-reading-surface) !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+}
+#main-content .postbody a { color: var(--ise-reading-gold) !important; }
+#main-content .postbody blockquote,
+#main-content .postbody .quote {
+  margin: 24px 0 !important;
+  padding: 18px 21px !important;
+  color: var(--ise-reading-muted) !important;
+  background: var(--ise-reading-surface-alt) !important;
+  border: 0 !important;
+  border-left: 3px solid var(--ise-reading-gold) !important;
+}
+#main-content .signature,
+#main-content .signature_div {
+  margin: 0 34px 27px !important;
+  padding: 17px 0 0 !important;
+  color: var(--ise-reading-muted) !important;
+  border-top: 1px solid var(--ise-reading-line) !important;
+}
+#main-content .forumline,
+#main-content .forabg,
+#main-content .forumbg {
+  overflow: hidden !important;
+  margin-bottom: 23px !important;
+  color: var(--ise-reading-ink) !important;
+  background: var(--ise-reading-surface) !important;
+  border: 1px solid var(--ise-reading-line) !important;
+  border-radius: 0 !important;
+  box-shadow: 8px 9px 0 rgba(68, 42, 18, .08) !important;
+}
+#main-content .forumline .header,
+#main-content .forabg .header,
+#main-content .forumbg .header {
+  padding: 17px 23px !important;
+  color: var(--ise-reading-inverse) !important;
+  background: var(--ise-reading-night) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+#main-content .topiclist li.row {
+  color: var(--ise-reading-ink) !important;
+  background: transparent !important;
+  border-bottom: 1px solid var(--ise-reading-line) !important;
+}
+#main-content .topiclist li.row:hover { background: var(--ise-reading-surface-alt) !important; }
+#main-content .topiclist .topictitle,
+#main-content .topiclist .topictitle a {
+  color: var(--ise-reading-ink) !important;
+  font-family: "Cormorant Garamond", "Palatino Linotype", Georgia, serif !important;
+  font-size: 23px !important;
+  font-weight: 500 !important;
+}
+#main-content .topiclist .topictitle a:hover { color: var(--ise-reading-gold) !important; }
+#main-content .topiclist .lastpost,
+#main-content .topiclist .posts,
+#main-content .topiclist .topics,
+#main-content .topiclist .forumdesc {
+  color: var(--ise-reading-muted) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 10px !important;
+  line-height: 1.55 !important;
+}
+@media (max-width: 760px) {
+  #main-content .sub-header {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    padding: 29px 23px 23px !important;
+  }
+  #main-content .sub-header-buttons { justify-content: flex-start !important; }
+  #main-content .postprofile {
+    float: none !important;
+    width: auto !important;
+    min-height: 0 !important;
+    padding: 22px !important;
+    border-bottom: 1px solid rgba(240, 202, 132, .22) !important;
+    border-left: 0 !important;
+  }
+  #main-content .postprofile-avatar,
+  #main-content .postprofile-avatar img {
+    float: left !important;
+    width: 64px !important;
+    height: 64px !important;
+    margin: 0 14px 9px 0 !important;
+  }
+  #main-content .post-head { padding: 0 20px !important; }
+  #main-content .post-head .topic-title,
+  #main-content .post-head .topic-title a { font-size: 19px !important; }
+  #main-content .postbody { padding: 25px 22px !important; }
+  #main-content .signature,
+  #main-content .signature_div { margin: 0 22px 21px !important; }
+}
