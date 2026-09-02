@@ -1,0 +1,228 @@
+/*
+  Iseranthe — profils, formulaires et pages privées
+  À charger après iseranthe.css.
+*/
+
+#profile-advanced-layout,
+#cp-main,
+#cp-menu,
+#memberlist,
+#main-content form[action*="login"],
+#main-content form[action*="register"] {
+  position: relative !important;
+}
+
+#profile-advanced-left::before {
+  content: "Dossier du voyageur" !important;
+  display: block !important;
+  margin: 0 0 18px !important;
+  padding-bottom: 11px !important;
+  color: var(--ise-gold) !important;
+  border-bottom: 1px solid var(--ise-line) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .17em !important;
+  text-transform: uppercase !important;
+}
+
+#profile-advanced-left .module {
+  position: relative !important;
+}
+
+#profile-advanced-left .module::before {
+  content: "✦" !important;
+  position: absolute !important;
+  top: 13px !important;
+  right: 13px !important;
+  color: var(--ise-gold) !important;
+  font-size: 9px !important;
+}
+
+#profile-advanced-right > h1:first-child,
+#profile-advanced-right > h2:first-child {
+  position: relative !important;
+  padding-bottom: 17px !important;
+}
+
+#profile-advanced-right > h1:first-child::after,
+#profile-advanced-right > h2:first-child::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: min(190px, 45%) !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, var(--ise-gold), transparent) !important;
+}
+
+#profile-advanced-details .profile-field,
+#profile-advanced-right .field_uneditable {
+  display: grid !important;
+  grid-template-columns: minmax(132px, .42fr) minmax(0, 1fr) !important;
+  gap: 14px !important;
+  align-items: baseline !important;
+}
+
+#profile-advanced-details .profile-field label,
+#profile-advanced-right label {
+  margin: 0 !important;
+}
+
+#profile-advanced-right .avatar {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+#profile-advanced-right .avatar::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 7px -7px -7px 7px !important;
+  z-index: -1 !important;
+  border: 1px solid var(--ise-line) !important;
+}
+
+#cp-menu::before {
+  content: "Cabinet personnel" !important;
+  display: block !important;
+  margin: 0 0 13px !important;
+  padding: 0 0 12px !important;
+  color: var(--ise-gold) !important;
+  border-bottom: 1px solid var(--ise-line) !important;
+  font-family: var(--ise-serif) !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+#cp-menu a {
+  position: relative !important;
+  padding-left: 21px !important;
+}
+
+#cp-menu a::before {
+  content: "·" !important;
+  position: absolute !important;
+  left: 8px !important;
+  color: var(--ise-gold) !important;
+  font-size: 16px !important;
+  line-height: .8 !important;
+}
+
+#cp-main > h1:first-child,
+#cp-main > h2:first-child {
+  position: relative !important;
+  padding-bottom: 15px !important;
+}
+
+#cp-main > h1:first-child::after,
+#cp-main > h2:first-child::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, var(--ise-gold), var(--ise-line), transparent) !important;
+}
+
+#main-content .panel form dl {
+  position: relative !important;
+  transition: background .18s ease !important;
+}
+
+#main-content .panel form dl:hover {
+  background: color-mix(in srgb, var(--ise-gold) 5%, transparent) !important;
+}
+
+#main-content .panel form dl::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 12px !important;
+  bottom: 12px !important;
+  left: 0 !important;
+  width: 2px !important;
+  background: var(--ise-gold) !important;
+  opacity: 0 !important;
+  transition: opacity .18s ease !important;
+}
+
+#main-content .panel form dl:focus-within::before,
+#main-content .panel form dl:hover::before {
+  opacity: 1 !important;
+}
+
+#main-content .panel fieldset {
+  position: relative !important;
+  background: color-mix(in srgb, var(--ise-gold) 3%, transparent) !important;
+}
+
+#main-content .panel fieldset::after {
+  content: "✦" !important;
+  position: absolute !important;
+  top: -8px !important;
+  right: 15px !important;
+  color: var(--ise-gold) !important;
+  font-size: 10px !important;
+}
+
+#main-content .message,
+#main-content .error,
+#main-content .error_msg {
+  position: relative !important;
+  padding-left: 44px !important;
+}
+
+#main-content .message::before,
+#main-content .error::before,
+#main-content .error_msg::before {
+  content: "✦" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 17px !important;
+  color: var(--ise-gold) !important;
+  transform: translateY(-50%) !important;
+}
+
+#main-content .error::before,
+#main-content .error_msg::before {
+  color: #b96655 !important;
+}
+
+#memberlist .row1,
+#memberlist .row2 {
+  position: relative !important;
+}
+
+#memberlist .row1::before,
+#memberlist .row2::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 2px !important;
+  background: var(--ise-gold) !important;
+  opacity: 0 !important;
+  transition: opacity .18s ease !important;
+}
+
+#memberlist .row1:hover::before,
+#memberlist .row2:hover::before {
+  opacity: 1 !important;
+}
+
+@media (max-width: 760px) {
+  #profile-advanced-details .profile-field,
+  #profile-advanced-right .field_uneditable {
+    display: block !important;
+  }
+
+  #profile-advanced-details .profile-field label,
+  #profile-advanced-right label {
+    margin-bottom: 7px !important;
+  }
+
+  #profile-advanced-right .avatar::after {
+    inset: 5px -5px -5px 5px !important;
+  }
+}
