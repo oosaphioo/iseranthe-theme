@@ -233,6 +233,12 @@ img { max-width: 100%; }
 #site-title {
   margin: 0;
   padding: 0;
+  color: var(--ise-hero-ink) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(46px, 7vw, 82px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: .94;
 }
 
 #site-title::before {
@@ -795,14 +801,40 @@ img { max-width: 100%; }
   line-height: 1.8;
 }
 
+.page-title,
+.page-title a {
+  color: var(--ise-ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(30px, 4vw, 47px) !important;
+  font-weight: 500 !important;
+  letter-spacing: -.02em;
+  line-height: 1.12 !important;
+}
+
+.topic-title,
+.topic-title a,
+.post h1,
+.post h1 a,
 .post h2,
+.post h2 a,
 .post h3,
-.topic-title {
+.post h3 a {
   margin: 0 0 13px !important;
   color: var(--ise-ink) !important;
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
 }
+
+.postbody h1,
+.postbody h2,
+.postbody h3,
+.postbody h4 {
+  color: var(--ise-ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+}
+
+.postbody a { color: var(--ise-gold) !important; }
 
 .topiclist.topics > .row,
 .topiclist.pmlist > .row {
