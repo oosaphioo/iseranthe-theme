@@ -1,0 +1,274 @@
+/*
+  Iseranthe — cadre premium
+  Les bannières existantes restent les seules images d'ambiance.
+*/
+.ise-page-header {
+  --ise-shell-paper: #fbf7ee;
+  --ise-shell-ink: #302116;
+  --ise-shell-muted: #836a51;
+  --ise-shell-gold: #a87330;
+  --ise-shell-gold-pale: #dfc083;
+  --ise-shell-night: #1f160f;
+  --ise-shell-line: rgba(134, 88, 34, .28);
+  --ise-shell-inverse: #fff8ea;
+}
+html[data-theme="dark"] .ise-page-header {
+  --ise-shell-paper: #1c1611;
+  --ise-shell-ink: #f2e4cc;
+  --ise-shell-muted: #cdb99d;
+  --ise-shell-gold: #dcaa56;
+  --ise-shell-gold-pale: #f0cb84;
+  --ise-shell-night: #100d0a;
+  --ise-shell-line: rgba(228, 180, 94, .27);
+  --ise-shell-inverse: #fff7e7;
+}
+.ise-page-header {
+  position: relative !important;
+  z-index: 20 !important;
+  box-shadow: 0 16px 34px rgba(37, 22, 10, .16) !important;
+}
+.ise-page-header .ise-utility-bar {
+  color: var(--ise-shell-gold-pale) !important;
+  background: var(--ise-shell-night) !important;
+  border-bottom: 1px solid rgba(226, 188, 116, .32) !important;
+}
+.ise-page-header .ise-utility-inner {
+  min-height: 43px !important;
+  max-width: 1220px !important;
+  margin: 0 auto !important;
+  padding: 0 28px !important;
+}
+.ise-page-header .ise-utility-note {
+  color: var(--ise-shell-gold-pale) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+.ise-page-header .ise-utility-note i { color: var(--ise-shell-gold) !important; }
+.ise-page-header .ise-header-action {
+  color: var(--ise-shell-gold-pale) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+.ise-page-header .ise-header-action:hover {
+  color: var(--ise-shell-inverse) !important;
+  background: rgba(255, 248, 234, .08) !important;
+}
+.ise-page-header .ise-masthead {
+  position: relative !important;
+  isolation: isolate !important;
+  min-height: 266px !important;
+  overflow: hidden !important;
+  border-bottom: 0 !important;
+}
+.ise-page-header .ise-masthead::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(15, 10, 6, .52), rgba(15, 10, 6, .06) 72%),
+    linear-gradient(0deg, rgba(16, 10, 6, .37), transparent 55%) !important;
+}
+.ise-page-header .ise-masthead-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  width: min(1220px, calc(100% - 48px)) !important;
+  min-height: 266px !important;
+  margin: 0 auto !important;
+  padding: 30px 0 !important;
+}
+.ise-page-header .ise-ornament { display: none !important; }
+.ise-page-header .ise-brand {
+  display: grid !important;
+  grid-template-columns: 54px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 19px !important;
+  width: min(550px, 100%) !important;
+  min-height: 115px !important;
+  margin: 0 !important;
+  padding: 21px 27px 22px !important;
+  color: var(--ise-shell-inverse) !important;
+  background: rgba(24, 16, 10, .56) !important;
+  border: 1px solid rgba(255, 245, 226, .54) !important;
+  box-shadow: 10px 11px 0 rgba(84, 52, 24, .28) !important;
+  text-decoration: none !important;
+}
+.ise-page-header .ise-heraldic-seal {
+  display: grid !important;
+  place-items: center !important;
+  width: 51px !important;
+  height: 51px !important;
+  color: var(--ise-shell-gold-pale) !important;
+  background: rgba(13, 9, 6, .44) !important;
+  border: 1px solid var(--ise-shell-gold-pale) !important;
+  border-radius: 50% !important;
+}
+.ise-page-header .ise-monogram {
+  color: var(--ise-shell-gold-pale) !important;
+  font-size: 23px !important;
+  line-height: 1 !important;
+}
+.ise-page-header .ise-brand-copy {
+  display: block !important;
+  min-width: 0 !important;
+  color: var(--ise-shell-inverse) !important;
+}
+.ise-page-header .ise-brand-copy small,
+.ise-page-header .ise-brand-copy em {
+  display: block !important;
+  color: var(--ise-shell-gold-pale) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: .19em !important;
+  text-transform: uppercase !important;
+}
+.ise-page-header .ise-brand-copy small { margin-bottom: 5px !important; }
+.ise-page-header .ise-brand-copy strong {
+  display: block !important;
+  color: var(--ise-shell-inverse) !important;
+  font-family: "Cormorant Garamond", "Palatino Linotype", Georgia, serif !important;
+  font-size: clamp(40px, 5vw, 64px) !important;
+  font-weight: 500 !important;
+  letter-spacing: .015em !important;
+  line-height: .84 !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, .6) !important;
+}
+.ise-page-header .ise-brand-copy em { margin-top: 12px !important; letter-spacing: .1em !important; }
+.ise-page-header .ise-navigation-ribbon {
+  position: relative !important;
+  min-height: 61px !important;
+  color: var(--ise-shell-ink) !important;
+  background: var(--ise-shell-paper) !important;
+  border-top: 1px solid var(--ise-shell-line) !important;
+  border-bottom: 1px solid var(--ise-shell-line) !important;
+}
+.ise-page-header .ise-navigation-ribbon::before,
+.ise-page-header .ise-navigation-ribbon::after {
+  content: "✦" !important;
+  position: absolute !important;
+  top: 50% !important;
+  color: var(--ise-shell-gold) !important;
+  font-size: 11px !important;
+  transform: translateY(-50%) !important;
+}
+.ise-page-header .ise-navigation-ribbon::before { left: max(18px, calc((100% - 1220px) / 2)) !important; }
+.ise-page-header .ise-navigation-ribbon::after { right: max(18px, calc((100% - 1220px) / 2)) !important; }
+.ise-page-header .ise-navigation-inner {
+  width: min(1120px, calc(100% - 96px)) !important;
+  min-height: 61px !important;
+  margin: 0 auto !important;
+}
+.ise-page-header .ise-main-navigation {
+  width: 100% !important;
+  min-height: 61px !important;
+}
+.ise-page-header #modernbb-nav-menu {
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  min-height: 61px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.ise-page-header #modernbb-nav-menu > li {
+  display: flex !important;
+  align-items: stretch !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.ise-page-header #modernbb-nav-menu > li > a {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  color: var(--ise-shell-ink) !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+.ise-page-header #modernbb-nav-menu > li > a img { display: none !important; }
+.ise-page-header #modernbb-nav-menu > li > a::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 50% !important;
+  bottom: 13px !important;
+  left: 50% !important;
+  height: 2px !important;
+  background: var(--ise-shell-gold) !important;
+  transition: right .18s ease, left .18s ease !important;
+}
+.ise-page-header #modernbb-nav-menu > li > a:hover {
+  color: var(--ise-shell-gold) !important;
+}
+.ise-page-header #modernbb-nav-menu > li > a:hover::after {
+  right: 10px !important;
+  left: 10px !important;
+}
+#page-footer {
+  margin-top: 64px !important;
+  color: var(--ise-shell-muted, #836a51) !important;
+  border-top: 1px solid var(--ise-shell-line, rgba(134, 88, 34, .28)) !important;
+}
+#page-footer .footerbar-system {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  margin: 0 !important;
+  padding: 19px 0 !important;
+  list-style: none !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: .06em !important;
+}
+#page-footer a { color: inherit !important; }
+#page-footer a:hover { color: var(--ise-shell-gold, #a87330) !important; }
+#page-footer .copyright {
+  padding: 17px 0 27px !important;
+  border-top: 1px solid var(--ise-shell-line, rgba(134, 88, 34, .28)) !important;
+  font-size: 10px !important;
+}
+@media (max-width: 760px) {
+  .ise-page-header .ise-utility-inner { padding: 0 15px !important; }
+  .ise-page-header .ise-utility-note { display: none !important; }
+  .ise-page-header .ise-masthead,
+  .ise-page-header .ise-masthead-inner { min-height: 225px !important; }
+  .ise-page-header .ise-masthead-inner { width: calc(100% - 30px) !important; }
+  .ise-page-header .ise-brand {
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    gap: 13px !important;
+    min-height: 0 !important;
+    padding: 17px 18px !important;
+    box-shadow: 6px 7px 0 rgba(84, 52, 24, .28) !important;
+  }
+  .ise-page-header .ise-heraldic-seal { width: 40px !important; height: 40px !important; }
+  .ise-page-header .ise-brand-copy strong { font-size: 39px !important; }
+  .ise-page-header .ise-brand-copy em { font-size: 8px !important; line-height: 1.45 !important; }
+  .ise-page-header .ise-navigation-ribbon::before,
+  .ise-page-header .ise-navigation-ribbon::after { display: none !important; }
+  .ise-page-header .ise-navigation-inner { width: 100% !important; }
+  .ise-page-header #modernbb-nav-menu {
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+  }
+  .ise-page-header #modernbb-nav-menu::-webkit-scrollbar { display: none !important; }
+  .ise-page-header #modernbb-nav-menu > li > a { padding: 0 13px !important; }
+  #page-footer .footerbar-system { flex-direction: column !important; }
+}
