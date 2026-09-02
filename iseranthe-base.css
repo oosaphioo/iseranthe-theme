@@ -525,8 +525,8 @@ img { max-width: 100%; }
   max-width: none !important;
   object-fit: cover;
   object-position: center;
-  opacity: .88;
-  filter: saturate(.76) contrast(1.06);
+  opacity: .8;
+  filter: brightness(.46) saturate(.72) contrast(1.08);
 }
 
 /* ModernBB applies this indent with !important; reset it for the contained hero card. */
@@ -546,6 +546,7 @@ img { max-width: 100%; }
   color: var(--ise-hero-ink) !important;
   font-size: 14px;
   line-height: 1.7;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .72);
 }
 
 .topiclist.forums .dterm > div::before {
