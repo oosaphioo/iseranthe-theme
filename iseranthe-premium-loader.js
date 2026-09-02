@@ -27,6 +27,10 @@
     {
       id: "shell-atmosphere",
       href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@5432ed67ac58e932882abc44f83ea27c3e265097/iseranthe-premium-shell-atmosphere.css"
+    },
+    {
+      id: "system-atmosphere",
+      href: "https://cdn.jsdelivr.net/gh/oosaphioo/iseranthe-theme@b325014830077ce6bf161c06ec4bb8b3624f7b25/iseranthe-premium-system-atmosphere.css"
     }
   ];
 
