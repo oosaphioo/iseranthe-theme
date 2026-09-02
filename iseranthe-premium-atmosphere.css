@@ -1,0 +1,158 @@
+/*
+  Iseranthe — densité et finitions de l'accueil
+  À charger après les feuilles premium existantes.
+  Aucun visuel externe : uniquement matière, lignes et typographie.
+*/
+
+.ise3-index .ise5-forum-card {
+  box-shadow:
+    12px 13px 0 rgba(76, 47, 21, .14),
+    inset 0 0 0 1px rgba(255, 248, 235, .08) !important;
+}
+
+.ise3-index .ise5-card-body {
+  position: relative !important;
+}
+
+.ise3-index .ise5-card-body::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 34px !important;
+  bottom: 61px !important;
+  left: 34px !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, rgba(240, 202, 132, .68), transparent) !important;
+  pointer-events: none !important;
+}
+
+.ise3-index .ise5-card-links {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 620px !important;
+}
+
+.ise3-index .ise5-card-links > span {
+  padding: 10px 12px 10px 13px !important;
+  background: rgba(14, 10, 6, .22) !important;
+  border-left: 2px solid var(--ise-premium-accent-soft) !important;
+}
+
+.ise3-index .ise5-card-links a {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .12) !important;
+}
+
+.ise3-index .ise3-online-panel {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+}
+
+.ise3-index .ise3-online-panel::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 11px !important;
+  border: 1px solid rgba(150, 104, 48, .18) !important;
+  pointer-events: none !important;
+}
+
+.ise3-index .ise3-online-panel > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.ise3-index .ise3-online-header::after {
+  content: "La salle des voyageurs" !important;
+  display: block !important;
+  width: 100% !important;
+  margin-top: 18px !important;
+  padding-top: 13px !important;
+  color: rgba(240, 202, 132, .68) !important;
+  border-top: 1px solid rgba(240, 202, 132, .25) !important;
+  font-family: var(--ise-premium-serif) !important;
+  font-size: 18px !important;
+  font-style: italic !important;
+  line-height: 1.05 !important;
+}
+
+.ise3-index .ise3-presence-grid {
+  position: relative !important;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .12), transparent 42%),
+    var(--ise-premium-surface) !important;
+}
+
+html[data-theme="dark"] .ise3-index .ise3-presence-grid {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .035), transparent 42%),
+    var(--ise-premium-surface) !important;
+}
+
+.ise3-index .ise3-presence-column {
+  position: relative !important;
+  padding-top: 12px !important;
+}
+
+.ise3-index .ise3-presence-column::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 22px !important;
+  left: 22px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, var(--ise-premium-accent), transparent) !important;
+  opacity: .55 !important;
+}
+
+.ise3-index .ise3-presence-column:first-child::before { left: 0 !important; }
+.ise3-index .ise3-presence-column:last-child::before { right: 0 !important; }
+
+.ise3-index .ise3-column-number {
+  float: right !important;
+  margin: -4px 0 0 13px !important;
+  opacity: .82 !important;
+}
+
+.ise3-index .ise3-community-footer {
+  position: relative !important;
+  background:
+    linear-gradient(90deg, rgba(168, 115, 48, .08), transparent 52%),
+    var(--ise-premium-surface-alt) !important;
+}
+
+.ise3-index .ise3-birthdays,
+.ise3-index .ise3-groups {
+  min-height: 42px !important;
+  padding: 3px 0 2px !important;
+}
+
+html[data-theme="light"] .ise3-index .ise5-card-links > span {
+  background: rgba(255, 252, 246, .56) !important;
+}
+
+html[data-theme="light"] .ise3-index .ise5-card-body::after {
+  background: linear-gradient(90deg, rgba(168, 115, 48, .65), transparent) !important;
+}
+
+@media (max-width: 760px) {
+  .ise3-index .ise5-card-body::after {
+    right: 24px !important;
+    bottom: 20px !important;
+    left: 24px !important;
+  }
+
+  .ise3-index .ise5-card-links > span {
+    padding: 10px !important;
+  }
+
+  .ise3-index .ise3-online-header::after {
+    margin-top: 15px !important;
+  }
+
+  .ise3-index .ise3-presence-column::before,
+  .ise3-index .ise3-presence-column:first-child::before,
+  .ise3-index .ise3-presence-column:last-child::before {
+    right: 0 !important;
+    left: 0 !important;
+  }
+}
