@@ -1,0 +1,178 @@
+/*
+  Iseranthe — finitions des pages système
+  Recherche, membres, messagerie, FAQ, connexion et édition.
+*/
+
+#main-content .panel,
+#main-content .search-results,
+#main-content .faq,
+#main-content .faq-list,
+#main-content .modcp,
+#main-content .report,
+#main-content .post-review,
+#memberlist,
+.privmsg {
+  position: relative !important;
+  isolation: isolate !important;
+}
+
+#main-content .panel::before,
+#main-content .search-results::before,
+#main-content .faq::before,
+#main-content .faq-list::before,
+#main-content .modcp::before,
+#main-content .report::before,
+#main-content .post-review::before,
+#memberlist::before,
+.privmsg::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 9px !important;
+  border: 1px solid color-mix(in srgb, var(--ise-line) 72%, transparent) !important;
+  pointer-events: none !important;
+}
+
+#main-content .panel > h1:first-child,
+#main-content .panel > .h3:first-child,
+#main-content .search-results > h1:first-child,
+#main-content .faq > h1:first-child,
+#main-content .faq-list > h1:first-child {
+  position: relative !important;
+  padding-right: 40px !important;
+}
+
+#main-content .panel > h1:first-child::after,
+#main-content .panel > .h3:first-child::after,
+#main-content .search-results > h1:first-child::after,
+#main-content .faq > h1:first-child::after,
+#main-content .faq-list > h1:first-child::after {
+  content: "✦" !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 3px !important;
+  color: var(--ise-gold) !important;
+  font-size: 11px !important;
+  transform: translateY(-50%) !important;
+}
+
+#main-content .search-results .topic,
+#main-content .faq li,
+#main-content .faq-list li {
+  position: relative !important;
+  padding-left: 18px !important;
+  transition: background .18s ease !important;
+}
+
+#main-content .search-results .topic::before,
+#main-content .faq li::before,
+#main-content .faq-list li::before {
+  content: "·" !important;
+  position: absolute !important;
+  top: 13px !important;
+  left: 3px !important;
+  color: var(--ise-gold) !important;
+  font-family: var(--ise-serif) !important;
+  font-size: 25px !important;
+  line-height: .5 !important;
+}
+
+#main-content .search-results .topic:hover,
+#main-content .faq li:hover,
+#main-content .faq-list li:hover {
+  background: color-mix(in srgb, var(--ise-gold) 5%, transparent) !important;
+}
+
+#memberlist thead,
+#memberlist .header {
+  position: relative !important;
+}
+
+#memberlist thead::after,
+#memberlist .header::after {
+  content: "Registre des voyageurs" !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 18px !important;
+  color: color-mix(in srgb, var(--ise-gold-bright) 74%, transparent) !important;
+  font-family: var(--ise-sans) !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  transform: translateY(-50%) !important;
+}
+
+#memberlist .avatar-mini img {
+  box-shadow: 4px 5px 0 color-mix(in srgb, var(--ise-gold) 20%, transparent) !important;
+  transition: filter .18s ease, transform .18s ease !important;
+}
+
+#memberlist .row1:hover .avatar-mini img,
+#memberlist .row2:hover .avatar-mini img {
+  filter: saturate(1.05) contrast(1.05) !important;
+  transform: translate(-1px, -1px) !important;
+}
+
+.privmsg .postprofile::before {
+  content: "Correspondance" !important;
+}
+
+.privmsg .postbody {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ise-gold) 4%, transparent), transparent 48%),
+    var(--ise-panel) !important;
+}
+
+#main-content form[action*="login"] .panel,
+#main-content form[action*="register"] .panel,
+#ucp .panel {
+  overflow: hidden !important;
+}
+
+#main-content form[action*="login"] .panel::after,
+#main-content form[action*="register"] .panel::after,
+#ucp .panel::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -100px !important;
+  right: -85px !important;
+  width: 220px !important;
+  height: 220px !important;
+  border: 1px solid color-mix(in srgb, var(--ise-gold) 32%, transparent) !important;
+  border-radius: 50% !important;
+  pointer-events: none !important;
+}
+
+#main-content .frm-set,
+#main-content .panel .button1,
+#main-content .panel input[type="submit"] {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+#main-content .panel .button1::before,
+#main-content .panel input[type="submit"]::before {
+  content: "✦" !important;
+  margin-right: 3px !important;
+  font-size: 8px !important;
+}
+
+@media (max-width: 760px) {
+  #main-content .panel::before,
+  #main-content .search-results::before,
+  #main-content .faq::before,
+  #main-content .faq-list::before,
+  #main-content .modcp::before,
+  #main-content .report::before,
+  #main-content .post-review::before,
+  #memberlist::before,
+  .privmsg::before {
+    inset: 6px !important;
+  }
+
+  #memberlist thead::after,
+  #memberlist .header::after {
+    display: none !important;
+  }
+}
